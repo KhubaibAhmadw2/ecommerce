@@ -1,13 +1,15 @@
-const mongoose=require('mongoose');
-const { connect } = require('tls');
+const mongoose = require("mongoose");
 
-const connectDatabase= ()=>{
-    
-mongoose.connect("mongodb://localhost:27017/Ecommerce",{useNewUrlParser:true,useUnifiedTopology:true}).then((data)=>{
-    console.log(`Mongodb connected with sever${data.connection.host}`)
-    }).catch((err)=>{
-    console.log(err)
+const connectDatabase = () => {
+  mongoose
+    .connect(process.env.DB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
     })
-}
+    .then((data) => {
+      console.log(`Mongodb connected with server: ${data.connection.host}`);
+    });
+};
 
-module.exports =connectDatabase
+module.exports = connectDatabase;
