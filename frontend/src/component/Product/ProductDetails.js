@@ -11,7 +11,7 @@ import ReviewCard from "./ReviewCard.js";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
-import { addItemsToCart } from "../../actions/cartAction";
+//import { addItemsToCart } from "../../actions/cartAction";
 import {
   Dialog,
   DialogActions,
@@ -60,11 +60,11 @@ const ProductDetails = ({ match }) => {
     setQuantity(qty);
   };
 
-  const addToCartHandler = () => {
+/*   const addToCartHandler = () => {
     dispatch(addItemsToCart(match.params.id, quantity));
     alert.success("Item Added To Cart");
   };
-
+ */
   const submitReviewToggle = () => {
     open ? setOpen(false) : setOpen(true);
   };
@@ -141,12 +141,12 @@ const ProductDetails = ({ match }) => {
                     <input readOnly type="number" value={quantity} />
                     <button onClick={increaseQuantity}>+</button>
                   </div>
-                  <button
+                  {/* <button
                     disabled={product.Stock < 1 ? true : false}
                     onClick={addToCartHandler}
                   >
                     Add to Cart
-                  </button>
+                  </button> */}
                 </div>
 
                 <p>
