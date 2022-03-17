@@ -10,41 +10,42 @@ import {
   productsReducer,
   reviewReducer,
 } from "./reducers/productReducer";
-
-/* import {
+ import {
   allUsersReducer,
   forgotPasswordReducer,
   profileReducer,
   userDetailsReducer,
- // userReducer,
+  userReducer,
 } from "./reducers/userReducer";
 
-import { cartReducer } from "./reducers/cartReducer"; */
-/* import {
+import { cartReducer } from "./reducers/cartReducer";
+ 
+ import {
   allOrdersReducer,
   myOrdersReducer,
   newOrderReducer,
   orderDetailsReducer,
   orderReducer,
-} from "./reducers/orderReducer"; */
+} from "./reducers/orderReducer"; 
 
 const reducer = combineReducers({
   products: productsReducer,
   productDetails: productDetailsReducer,
-//  user: userReducer,
- /*  profile: profileReducer,
+   
+ user: userReducer,
+   profile: profileReducer,
   forgotPassword: forgotPasswordReducer,
-  cart: cartReducer,
+  
   newOrder: newOrderReducer,
   myOrders: myOrdersReducer,
-  orderDetails: orderDetailsReducer, */
-  newReview: newReviewReducer,
+  orderDetails: orderDetailsReducer, 
+   newReview: newReviewReducer,
   newProduct: newProductReducer,
-  product: productReducer,
- /*  allOrders: allOrdersReducer,
+  product: productReducer, 
+   allOrders: allOrdersReducer,
   order: orderReducer,
   allUsers: allUsersReducer,
-  userDetails: userDetailsReducer, */
+  userDetails: userDetailsReducer, 
   productReviews: productReviewsReducer,
   review: reviewReducer,
 });
@@ -68,4 +69,4 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middleware))
 );
 
-export default store;
+export default store; 
